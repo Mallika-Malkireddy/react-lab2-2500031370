@@ -1,4 +1,4 @@
-import { #Router} from 'react-router-dom';
+import { HashRouter} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import MainNavBar from './pages/MainNavBar';
@@ -19,11 +19,11 @@ function App() {
   }, []);
 
   return (
-     <#Router>
+     <HashRouter>
          {isAdmin && <AdminNavBar/>}
        
          {!isAdmin  && <MainNavBar/>}
-     </#Router>
+     </HashRouter>
   );
 }
 
