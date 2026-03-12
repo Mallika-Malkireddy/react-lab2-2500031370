@@ -25,7 +25,7 @@ export default function AdminNavBar() {
         <ul className="navbar-links">
           <li><Link to="/admin/home" className="nav-link">Home</Link></li>
           <li><Link to="/admin/view-customers" className="nav-link">View Customers</Link></li>
-        <li><Link to="/apidetails" className="nav-link">ApiDetails</Link></li>
+        <li><Link to="/admin/apidetails" className="nav-link">ApiDetails</Link></li>
           <li><button onClick={handleLogout} className="logout-btn">Logout</button></li>
         </ul>
       </nav>
@@ -34,7 +34,7 @@ export default function AdminNavBar() {
         <Routes>
           <Route path="/admin/home" element={<AdminHome />} />
           <Route path="/admin/view-customers" element={<ViewCustomers />} />
-         <Route path="/apidetails" element={<ApiDetails/>}/>
+         <Route path="/admin/apidetails" element={<ApiDetails/>}/>
           <Route path="/admin/logout" element={<AdminLogout />} />
         </Routes>
       </div>
