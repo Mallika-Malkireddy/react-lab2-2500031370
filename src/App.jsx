@@ -19,11 +19,11 @@ function App() {
   }, []);
 
   return (
-     <BrowserRouter>
+     <#Router>
          {isAdmin && <AdminNavBar/>}
        
          {!isAdmin  && <MainNavBar/>}
-     </BrowserRouter>
+     </#Router>
   );
 }
 
