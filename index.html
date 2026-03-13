@@ -1,13 +1,16 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/react-lab2-2500031370/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>reactlab2</title>
-    <script type="module" crossorigin src="/react-lab2-2500031370/assets/index-C6f1Jt2-.js"></script>
+    <meta charset="utf-8" />
+    <script>
+      // Redirect all requests to index.html
+      var path = window.location.pathname.replace(
+        "/react-lab2-2500031370",
+        ""
+      );
+      window.location.replace(
+        "/react-lab2-2500031370/#" + path + window.location.search
+      );
+    </script>
   </head>
-  <body>
-    <div id="root"></div>
-  </body>
 </html>
