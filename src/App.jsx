@@ -19,11 +19,9 @@ function App() {
   }, []);
 
   return (
-     <HashRouter>
-         {isAdmin && <AdminNavBar/>}
-       
-         {!isAdmin  && <MainNavBar/>}
-     </HashRouter>
+    <HashRouter>
+  {isAdmin ? <AdminNavBar /> : <MainNavBar />}
+</HashRouter>
   );
 }
 
