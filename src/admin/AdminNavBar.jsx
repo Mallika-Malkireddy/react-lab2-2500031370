@@ -4,6 +4,7 @@ import { Link, Routes, Route, useNavigate } from 'react-router-dom';
 import AdminHome from './AdminHome';
 import ViewCustomers from './ViewCustomers';
 import ApiDetails from './ApiDetails';
+
 import AdminLogout from './AdminLogout';
 
 export default function AdminNavBar() {
@@ -12,7 +13,7 @@ export default function AdminNavBar() {
   const handleLogout = () => {
     sessionStorage.removeItem('isAdmin');
     navigate('/');
-  
+    window.location.reload();
   };
 
   return (
@@ -22,18 +23,19 @@ export default function AdminNavBar() {
           <h1>Admin Dashboard</h1>
         </div>
         <ul className="navbar-links">
-          <li><Link to="home" className="nav-link">Home</Link></li>
-          <li><Link to="view-customers" className="nav-link">View Customers</Link></li>
-        <li><Link to="apidetails" className="nav-link">ApiDetails</Link></li>
+          <li><Link to="/admin/home" className="nav-link">Home</Link></li>
+          <li><Link to="/admin/view-customers" className="nav-link">View Customers</Link></li>
+        <li><Link to="/admin/apidetails" className="nav-link">ApiDetails</Link></li>
           <li><button onClick={handleLogout} className="logout-btn">Logout</button></li>
         </ul>
       </nav>
 
       <div className="admin-content">
         <Routes>
-          <Route path="home" element={<AdminHome />} />
-          <Route path="view-customers" element={<ViewCustomers />} />
-         <Route path="apidetails" element={<ApiDetails/>}/>
+          <Route path="/admin/home" element={<AdminHome />} />
+          <Route path="/admin/view-customers" element={<ViewCustomers />} />
+         <Route path="/admin/apidetails" element={<ApiDetails/>}/>
+          <Route path="/admin/logout" element={<AdminLogout />} />
         </Routes>
       </div>
     </div>
